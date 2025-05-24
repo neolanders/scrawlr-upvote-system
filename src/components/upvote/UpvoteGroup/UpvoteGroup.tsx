@@ -6,15 +6,14 @@ import Button, { ButtonSize } from '@/components/ui/Button';
 import Icon from '@/components/ui/Icon';
 import UpvoteList from './UpvoteList';
 import styles from './UpvoteGroup.module.scss';
+import { IconSize } from '@/components/ui/Icon/types';
 
 export interface UpvoteGroupProps {
   listId: string;
-  size?: 'small' | 'medium' | 'large';
 }
 
 const UpvoteGroup: React.FC<UpvoteGroupProps> = ({
   listId,
-  size = 'medium',
 }) => {
   const dispatch = useDispatch();
   const list = useSelector((state: RootState) => state.lists[listId]);
@@ -42,7 +41,6 @@ const UpvoteGroup: React.FC<UpvoteGroupProps> = ({
           listId={listId}
           items={list.items}
           selected={list.selected}
-          size={size}
           onToggle={handleToggle}
         />
       </div>
@@ -52,7 +50,7 @@ const UpvoteGroup: React.FC<UpvoteGroupProps> = ({
         aria-label={`Add upvote to group ${listId}`}
         className={styles.addButton}
       >
-        <Icon name="add" size={size} />
+        <Icon name="add" size={IconSize.Large} />
       </Button>
     </div>
   );

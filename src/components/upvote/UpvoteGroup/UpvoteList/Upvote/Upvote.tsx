@@ -2,6 +2,7 @@ import React from 'react';
 import Icon from '@/components/ui/Icon';
 import Button, { ButtonSize } from '@/components/ui/Button';
 import styles from './Upvote.module.scss';
+import { IconSize } from '@/components/ui/Icon/types';
 
 // Variables
 const DEFAULT_ARROW = '#343A40';
@@ -10,14 +11,12 @@ const SELECTED_ARROW = '#253CF2';
 export interface UpvoteProps {
   selected: boolean;
   onClick: () => void;
-  size?: 'small' | 'medium' | 'large';
   id: string;
 }
 
 const Upvote: React.FC<UpvoteProps> = ({
   selected,
   onClick,
-  size = 'medium',
   id,
 }) => {
   return (
@@ -31,7 +30,7 @@ const Upvote: React.FC<UpvoteProps> = ({
     >
       <Icon 
         name="arrow" 
-        size={size} 
+        size={IconSize.Large} 
         color={selected ? SELECTED_ARROW : DEFAULT_ARROW}
       />
     </Button>

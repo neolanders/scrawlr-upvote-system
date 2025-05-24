@@ -6,7 +6,6 @@ export interface UpvoteListProps {
   listId: string;
   items: number;
   selected: boolean;
-  size: 'small' | 'medium' | 'large';
   onToggle: () => void;
 }
 
@@ -14,7 +13,6 @@ const UpvoteList: React.FC<UpvoteListProps> = ({
   listId,
   items,
   selected,
-  size,
   onToggle,
 }) => {
   return (
@@ -29,7 +27,6 @@ const UpvoteList: React.FC<UpvoteListProps> = ({
           id={`${listId}-${index}`}
           selected={selected}
           onClick={onToggle}
-          size={size}
         />
       ))}
     </div>
