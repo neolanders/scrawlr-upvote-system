@@ -1,0 +1,55 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins/buttons' as *;
+
+// Variables
+$default-bg: #F4F6F8;
+$selected-bg: #E5E8FD;
+$default-arrow: #343A40;
+$selected-arrow: #253CF2;
+$upvote-size: 2.1875rem;
+
+.upvote {
+  @include upvote-button($button-size-medium);
+
+  &[data-size='small'] {
+    @include upvote-button($button-size-small);
+  }
+
+  &[data-size='large'] {
+    @include upvote-button($button-size-large);
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $upvote-size;
+  height: $upvote-size;
+  border-radius: 0.5rem;
+  background-color: $default-bg;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+
+  .icon {
+    width: $upvote-size;
+    height: $upvote-size;
+    transition: color 0.2s ease;
+  }
+
+  &.selected {
+    background-color: $selected-bg;
+
+    .icon {
+      color: $selected-arrow;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:focus {
+    outline: none;
+  }
+} 

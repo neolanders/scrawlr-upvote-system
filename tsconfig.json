@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    // "types": [],
+    "types": ["react", "react-dom"],
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@ui/*": ["src/components/common/*"],
+      "@store/*": ["src/store/*"],
+      "@styles/*": ["src/styles/*"],
+      "components/*": ["src/components/*"],
+      "store/*": ["src/store/*"],
+      "assets/*": ["src/assets/*"],
+      "styles/*": ["src/styles/*"],
+      "__mocks__/*": ["__mocks__/*"]
+    },
+    "typeRoots": ["./node_modules/@types", "./src"],
+    "noEmit": true
+  },
+  "include": ["src/**/*"]
+}

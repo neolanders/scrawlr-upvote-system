@@ -1,0 +1,14 @@
+.upvotes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+
+  @media (max-width: 640px) {
+    gap: 0.25rem;
+    justify-content: center;
+  }
+} 

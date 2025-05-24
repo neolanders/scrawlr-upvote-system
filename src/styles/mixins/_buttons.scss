@@ -1,0 +1,41 @@
+@use '../variables' as *;
+
+@mixin button-base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $border-radius-sm;
+  border: none;
+  cursor: pointer;
+  transition: $transition-base;
+  padding: 0;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin upvote-button($size) {
+  @include button-base;
+  width: $size;
+  height: $size;
+  background-color: $default-bg;
+
+  .icon {
+    width: $size;
+    height: $size;
+    transition: $transition-color;
+  }
+
+  &.selected {
+    background-color: $selected-bg;
+
+    .icon {
+      color: $selected-arrow;
+    }
+  }
+} 
