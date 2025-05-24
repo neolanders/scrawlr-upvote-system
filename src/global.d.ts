@@ -16,4 +16,14 @@ declare module '*.css' {
 declare module '*.module.css' {
   const styles: { [className: string]: string };
   export default styles;
+}
+
+declare module '__mocks__/*' {
+  const value: unknown;
+  export default value;
+}
+
+declare module 'assets/*' {
+  const value: unknown;
+  export default value;
 } 

@@ -9,9 +9,9 @@
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "jsx": "react-jsx",
     "strict": true,
+    "types": [],
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
@@ -21,10 +21,15 @@
       "@components/*": ["src/components/*"],
       "@ui/*": ["src/components/common/*"],
       "@store/*": ["src/store/*"],
-      "@styles/*": ["src/styles/*"]
+      "@styles/*": ["src/styles/*"],
+      "components/*": ["src/components/*"],
+      "store/*": ["src/store/*"],
+      "assets/*": ["src/assets/*"],
+      "styles/*": ["src/styles/*"],
+      "__mocks__/*": ["__mocks__/*"]
     },
-    "typeRoots": ["./node_modules/@types", "./src"]
+    "typeRoots": ["./node_modules/@types", "./src"],
+    "noEmit": true
   },
-  "include": ["src/**/*", "src/global.d.ts"],
-  "references": [{ "path": "./tsconfig.app.json" }]
+  "include": ["src/**/*"]
 }

@@ -7,7 +7,12 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   resolve: {
     alias: [
-      { find: '@', replacement: '/src' } // 🔥 important for SCSS imports
+      { find: '@', replacement: '/src' },
+      { find: '@components', replacement: '/src/components' },
+      { find: '@store', replacement: '/src/store' },
+      { find: '@assets', replacement: '/src/assets' },
+      { find: '@styles', replacement: '/src/styles' },
+      { find: '__mocks__', replacement: '__mocks__' },  
     ]
   },
   css: {

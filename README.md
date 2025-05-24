@@ -45,6 +45,49 @@ npm run dev
 
 4. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
+## Running in GitHub Codespaces
+
+This project is configured to run in GitHub Codespaces, providing a consistent development environment in the cloud.
+
+### Quick Start
+
+1. Click the "Code" button in the repository
+2. Select the "Codespaces" tab
+3. Click "Create codespace on main"
+
+The environment will be automatically configured with:
+- Node.js 20
+- All required VS Code extensions
+- Pre-configured development settings
+
+### Development in Codespaces
+
+Once your codespace is ready:
+
+1. The dependencies will be automatically installed
+2. Start the development server:
+```bash
+npm run dev
+```
+3. The application will be available on port 5173
+4. GitHub Codespaces will automatically forward the port to your browser
+
+### Features
+
+- **Pre-configured Environment**: All dependencies and tools are pre-installed
+- **VS Code Integration**: Full VS Code experience in the browser
+- **Port Forwarding**: Automatic port forwarding for development server
+- **Git Integration**: Full Git support with your GitHub account
+- **Extensions**: Pre-installed extensions for React, TypeScript, and ESLint
+
+### Troubleshooting
+
+If you encounter any issues:
+
+1. **Port Already in Use**: The development server will automatically use the next available port
+2. **Dependencies**: Run `npm install` if dependencies are not automatically installed
+3. **VS Code Extensions**: All required extensions are pre-installed, but you can install additional ones if needed
+
 ## Available Scripts
 
 - `npm run dev` - Start development server
