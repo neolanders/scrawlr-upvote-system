@@ -1,0 +1,58 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins/buttons' as *;
+
+$gap: 0.5rem;
+$upvote-size: 2.1875rem;
+
+$default-bg: #F4F6F8;
+$selected-bg: #E5E8FD;
+$default-arrow: #343A40;
+$selected-arrow: #253CF2;
+$upvote-size: 2.1875rem;
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: $spacing-md;
+  }
+}
+
+.group {
+  transition: $transition-base;
+  min-height: 5.5rem;
+  padding: $spacing-sm;
+  border-radius: $border-radius-md;
+  border: 1px solid $border-color;
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  flex-wrap: wrap;
+  overflow: auto;
+  margin-right: 1.5rem;
+  min-width: 30.25rem;
+
+  @media (max-width: 640px) {
+    min-height: 4rem;
+    padding: $spacing-xs;
+    min-width: 100%;
+  }
+
+  &:hover {
+    box-shadow: $shadow-sm;
+  }
+}
+
+.addButton {
+  @include upvote-button($button-size-medium);
+
+  @media (max-width: 640px) {
+    align-self: center;
+    width: 100%;
+  }
+} 
